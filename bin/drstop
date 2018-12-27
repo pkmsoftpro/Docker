@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+# Stops container by name
+# by torstein@escenic.com
+
+container_name=$1
+
+docker_id=$(docker ps -qf "name=${container_name}")
+docker stop "${docker_id}"
